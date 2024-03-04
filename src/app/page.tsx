@@ -1,7 +1,8 @@
 export default function Home() {
   return (
-    <main >
-      <h2>Setup</h2>
+    <main className="padding-container">
+      <h1>Hello</h1>
+    
     </main>
   );
 }
