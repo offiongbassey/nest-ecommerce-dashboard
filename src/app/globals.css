@@ -13,4 +13,9 @@ body{
   font-family: Quicksand;
 }
 
+@layer utilities{
+  .padding-container {
+    @apply px-2 lg:px-8
+  }
+}
 
