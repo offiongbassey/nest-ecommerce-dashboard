@@ -15,7 +15,13 @@ body{
 
 @layer utilities{
   .padding-container {
-    @apply px-2 lg:px-8
+    @apply px-4 lg:px-8
+  }
+  .btn_green{
+    @apply bg-green-10 rounded-md text-white font-[500]
+  }
+  .container {
+    @apply rounded-2xl border border-gray-20 p-4 bg-white
   }
 }
 
