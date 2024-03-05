@@ -31,6 +31,13 @@ const config: Config = {
           40: "#3BB77E",
           50: "#DEF9EC"
         },
+        orange: {
+          10: "#ff9505",
+          20: "#ffd29d"
+        },
+        blue: {
+          10: "#0496ff"
+        }
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
