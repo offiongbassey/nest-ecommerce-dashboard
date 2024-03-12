@@ -8,15 +8,15 @@ const LatestOrders = () => {
         <div className='p-4'>
             <h4 className='text-green-30 font-[600] text-xl'>Latest orders</h4>
             <div className='flex flex-col md:flex-row gap-4 md:items-center justify-between py-6'>
-                <select className="focus:outline-none px-6 py-2 rounded-md bg-gray-80">
+                <select className="primary-select">
                     <option>All Categories</option>
                     <option>Drinks</option>
                     <option>Food</option>
                     <option>Snacks</option>
                 </select>
                 <div className='flex gap-4 items-center'>
-                <input type="date" className="focus:outline-none px-6 py-2 rounded-md bg-gray-80" />
-                <select className="focus:outline-none px-6 py-2 rounded-md bg-gray-80">
+                <input type="date" className="focus:outline-none px-6 py-2 rounded-md bg-gray-90" />
+                <select className="primary-select">
                     <option>Status</option>
                     <option>Pending</option>
                     <option>Ordered</option>
