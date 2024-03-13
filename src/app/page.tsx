@@ -1,9 +1,9 @@
-import Dashboard from "@/components/dashboard/Dashboard";
+import Login from "@/components/auth/Login";
 
 export default function Home() {
   return (
-    <main className="padding-container">
-      <Dashboard />
+    <main>
+      <Login />
     </main>
   );
 }

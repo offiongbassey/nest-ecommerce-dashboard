@@ -14,7 +14,7 @@ const Product = () => {
         <div className="grid grid-cols-2 md:flex gap-2 items-center">
             <Button type="button" variant="btn_green_outline">Export</Button>
             <Button type="button" variant="btn_green_outline">Import</Button>
-            <Link href="/product/create"><Button type="button" variant="btn_green">Create New</Button></Link>
+            <Link href="/dashboard/product/create"><Button type="button" variant="btn_green">Create New</Button></Link>
         </div>
      </div>
      <div className="bg-white rounded-2xl border border-gray-20 my-6">
