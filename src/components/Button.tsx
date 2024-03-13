@@ -8,7 +8,7 @@ interface ButtonProps {
 
 const Button = ({ type, variant, children, short, size }: ButtonProps) => {
   return (
-   <button type={type} className={`${variant} ${size && size === "small" ? "px-6 py-2" : "px-8 py-3"} whitespace-nowrap flex gap-4 items-center`}>{children}</button>
+   <button type={type} className={`${variant} ${size && size === "small" ? "px-6 py-2" : "px-8 py-3"} whitespace-nowrap flex gap-2 items-center`}>{children}</button>
   )
 }
 

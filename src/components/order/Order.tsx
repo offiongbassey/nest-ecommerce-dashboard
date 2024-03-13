@@ -53,7 +53,7 @@ const Order = () => {
                         <td className='px-4 py-3'>Marvin McKiney</td>
                         <td className='px-4 py-3'>marvin@gmail.com</td>
                         <td className='px-4 py-3'>$9.5</td>
-                        <td className='px-4 py-3'><span className='px-3 py-2 rounded-2xl bg-green-50 text-green-10'>received</span></td>
+                        <td className='px-4 py-3'><span className='px-3 py-2 rounded-2xl bg-green-50 text-green-10 font-bold'>received</span></td>
                         <td className='px-4 py-3'>03.12.2020</td>
                         <td className='px-4 py-3 flex gap-2'><Link href="/order-detail"><Button type="button" variant="btn_green">Detail</Button></Link><Button type='button' variant='btn_green_outline'>...</Button></td>
                     </tr>
@@ -62,7 +62,7 @@ const Order = () => {
                         <td className='px-4 py-3'>Marvin McKiney</td>
                         <td className='px-4 py-3'>marvin@gmail.com</td>
                         <td className='px-4 py-3'>$9.5</td>
-                        <td className='px-4 py-3'><span className='px-3 py-2 rounded-2xl bg-green-50 text-green-10'>received</span></td>
+                        <td className='px-4 py-3'><span className='px-3 py-2 rounded-2xl bg-green-50 text-green-10 font-bold'>received</span></td>
                         <td className='px-4 py-3'>03.12.2020</td>
                         <td className='px-4 py-3 flex gap-2'><Link href="/order-detail"><Button type="button" variant="btn_green">Detail</Button></Link><Button type='button' variant='btn_green_outline'>...</Button></td>
                     </tr>
