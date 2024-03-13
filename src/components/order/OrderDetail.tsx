@@ -22,6 +22,9 @@ const OrderDetail = () => {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-2">
                     <select className="primary-select">
                         <option>Change Status</option>
+                        <option>Approved</option>
+                        <option>Declined</option>
+                        <option>Delivered</option>
                     </select>
                     <div className="flex gap-2">
                         <Button type="button" variant="btn_green">Save</Button>

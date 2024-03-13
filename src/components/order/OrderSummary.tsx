@@ -63,7 +63,7 @@ const OrderSummary = () => {
             </div>
             <div>
                 <p>Notes</p>
-                <textarea rows={3} className="bg-gray-90 focus:outline-none rounded-md w-full mb-4"></textarea>
+                <textarea rows={3} className="bg-gray-90 focus:outline-none rounded-md w-full mb-4 p-2"></textarea>
                 <Button type="button" variant="btn_green">Save note</Button>
             </div>
         </div>
