@@ -10,19 +10,19 @@ const SidebarList = () => {
     <div className="text-green-30 font-[600] p-6">
       <ul className="flex flex-col gap-2">
             <li className="p-2 rounded-md">
-                <Link href="/" className="flex gap-4 items-center" ><MdDashboard className="text-gray-50" size={20} /> Dashboard</Link>
+                <Link href="/dashboard" className="flex gap-4 items-center" ><MdDashboard className="text-gray-50" size={20} /> Dashboard</Link>
             </li>
             <li className="p-2 rounded-md">
-                <Link href="/product" className="flex gap-4 items-center" ><FaBagShopping className="text-gray-50" size={20} /> Products</Link>
+                <Link href="/dashboard/product" className="flex gap-4 items-center" ><FaBagShopping className="text-gray-50" size={20} /> Products</Link>
             </li>
             <li className=" bg-green-50 p-2 rounded-md">
-                <Link href="/order" className="flex gap-4 items-center" ><BsFillCartCheckFill className="text-gray-50" size={20} /> Orders</Link>
+                <Link href="/dashboard/order" className="flex gap-4 items-center" ><BsFillCartCheckFill className="text-gray-50" size={20} /> Orders</Link>
             </li>
             <li className="p-2 rounded-md">
-                <Link href="/transaction" className="flex gap-4 items-center" ><AiOutlineTransaction className="text-gray-50" size={20} /> Transactions</Link>
+                <Link href="/dashboard/transaction" className="flex gap-4 items-center" ><AiOutlineTransaction className="text-gray-50" size={20} /> Transactions</Link>
             </li>
             <li className="p-2 rounded-md">
-                <Link href="/profile" className="flex gap-4 items-center" ><FaUserAlt className="text-gray-50" size={20} /> Account</Link>
+                <Link href="/dashboard/profile" className="flex gap-4 items-center" ><FaUserAlt className="text-gray-50" size={20} /> Account</Link>
             </li>
       </ul>
     </div>
