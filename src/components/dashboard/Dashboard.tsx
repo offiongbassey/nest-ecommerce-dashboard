@@ -8,7 +8,7 @@ import LatestOrders from "./LatestOrders";
 
 const Dashboard = () => {
   return (
-    <section className="text-green-30 pt-32 ">
+    <section className="text-green-30 pt-32">
         <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
             <div>
                 <h2 className="text-2xl font-[600]">Dashboard</h2>

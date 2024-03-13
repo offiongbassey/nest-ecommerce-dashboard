@@ -13,16 +13,16 @@ const SidebarList = () => {
                 <Link href="/" className="flex gap-4 items-center" ><MdDashboard className="text-gray-50" size={20} /> Dashboard</Link>
             </li>
             <li className="p-2 rounded-md">
-                <Link href="/" className="flex gap-4 items-center" ><FaBagShopping className="text-gray-50" size={20} /> Products</Link>
+                <Link href="/product" className="flex gap-4 items-center" ><FaBagShopping className="text-gray-50" size={20} /> Products</Link>
             </li>
             <li className=" bg-green-50 p-2 rounded-md">
-                <Link href="/" className="flex gap-4 items-center" ><BsFillCartCheckFill className="text-gray-50" size={20} /> Orders</Link>
+                <Link href="/order" className="flex gap-4 items-center" ><BsFillCartCheckFill className="text-gray-50" size={20} /> Orders</Link>
             </li>
             <li className="p-2 rounded-md">
-                <Link href="/" className="flex gap-4 items-center" ><AiOutlineTransaction className="text-gray-50" size={20} /> Transactions</Link>
+                <Link href="/transaction" className="flex gap-4 items-center" ><AiOutlineTransaction className="text-gray-50" size={20} /> Transactions</Link>
             </li>
             <li className="p-2 rounded-md">
-                <Link href="/" className="flex gap-4 items-center" ><FaUserAlt className="text-gray-50" size={20} /> Account</Link>
+                <Link href="/profile" className="flex gap-4 items-center" ><FaUserAlt className="text-gray-50" size={20} /> Account</Link>
             </li>
       </ul>
     </div>
