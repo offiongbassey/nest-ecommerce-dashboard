@@ -3,7 +3,7 @@ import Input from "../Input"
 
 const AddProduct = () => {
   return (
-    <div className="padding-container pt-32 text-green-30">
+    <div className="padding-container pt-32 text-green-30 w-full">
       <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
         <div>
             <h2 className="text-2xl font-[600]">Add New Product</h2>

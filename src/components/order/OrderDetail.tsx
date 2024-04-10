@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const OrderDetail = () => {
   return (
-    <div className="text-green-30 pt-32 padding-container">
+    <div className="text-green-30 pt-32 padding-container w-full">
         <h2 className="text-2xl font-[600]">Order Detail</h2>
         <p>Details for Order ID: 3453012</p>
         <div className="bg-white rounded-2xl border border-gray-20 p-6 my-6">

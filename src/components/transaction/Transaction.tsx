@@ -4,7 +4,7 @@ import TransactionList from "./TransactionList"
 
 const Transaction = () => {
   return (
-    <div className="padding-container pt-32 text-green-30">
+    <div className="padding-container pt-32 text-green-30 w-full">
         <h2 className="text-2xl font-[600]">Transactions</h2>
         <div className="rounded-2xl border border-gray-20 bg-white mt-6 flex flex-col md:flex-row gap-4">
             <div className="w-full">
