@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "../Button";
 import { FaWpforms } from "react-icons/fa6";
 import Report from "./Report";
@@ -5,13 +7,15 @@ import { AiFillDollarCircle } from "react-icons/ai";
 import { FaTruck } from "react-icons/fa6";
 import Analysis from "./Analysis";
 import LatestOrders from "./LatestOrders";
+import { useAppSelector } from "@/redux/store";
 
 const Dashboard = () => {
+  const {first_name} = useAppSelector((state) => state.user);
   return (
     <section className="text-green-30 pt-32">
         <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
             <div>
-                <h2 className="text-2xl font-[600]">Dashboard</h2>
+                <h2 className="text-2xl font-[600]">Dashboard {first_name}</h2>
                 <p className="font-[500]">Whole data about your business here</p>
             </div>
             <div>

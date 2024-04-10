@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Order = () => {
   return (
-    <div className='text-green-30 pt-32 padding-container'>
+    <div className='text-green-30 pt-32 padding-container w-full'>
       <div className='flex items-center justify-between'>
         <div>
             <h2 className='text-2xl font-[600]'>Order List</h2>
