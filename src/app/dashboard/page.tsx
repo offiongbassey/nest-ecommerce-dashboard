@@ -1,13 +1,13 @@
 "use client";
 
 import Dashboard from "@/components/dashboard/Dashboard";
-import { useAppSelector } from "@/redux/store";
+import {  } from "@/redux/store";
 import { useRouter } from "next/navigation";
 import { useLayoutEffect } from "react";
 
 
 const page = () => {
-  // const { token } = useAppSelector(state => state.user);
+  // const { token } = useAppSelector(state => state.user.user);
   // const router = useRouter();
 
   // useLayoutEffect(() => {

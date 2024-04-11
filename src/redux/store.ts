@@ -2,17 +2,27 @@ import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import userReducer from './features/userSlice';
+import productReducer from "./features/product/productSlice";
 import { TypedUseSelectorHook, useSelector } from "react-redux";
 
-const persistConfig = {
-    key: "root",
+const userPersistConfig = {
+    key: "user",
     storage,
   };
+
+const productPersistConfig = {
+    key: "product",
+    storage,
+    blacklist: ["product"]
+}
   
-const persistedReducer = persistReducer(persistConfig, userReducer);
+const persistedUserReducer = persistReducer(userPersistConfig, userReducer);
   
 export const store = configureStore({
-    reducer: persistedReducer,
+    reducer: {
+        user: persistedUserReducer,
+        product: productReducer
+    },
     middleware: getDefaultMiddleware => 
         getDefaultMiddleware({
             serializableCheck: false

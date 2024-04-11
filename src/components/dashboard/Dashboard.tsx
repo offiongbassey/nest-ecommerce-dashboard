@@ -10,7 +10,7 @@ import LatestOrders from "./LatestOrders";
 import { useAppSelector } from "@/redux/store";
 
 const Dashboard = () => {
-  const {first_name} = useAppSelector((state) => state.user);
+  const {first_name} = useAppSelector((state) => state.user.user);
   return (
     <section className="text-green-30 pt-32">
         <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
