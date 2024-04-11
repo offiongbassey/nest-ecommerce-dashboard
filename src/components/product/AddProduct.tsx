@@ -1,5 +1,6 @@
 import Button from "../Button"
 import Input from "../Input"
+import ProductCategory from "./product-utils/ProductCategory"
 
 const AddProduct = () => {
   return (
@@ -56,34 +57,7 @@ const AddProduct = () => {
                     <Input name="file" type="file" variant="primary-input" placeholder="" />
                 </div>
             </div>
-            <div className="bg-white rounded-2xl border border-gray-20 mb-6">
-                <div className="p-6">
-                    <h4 className="text-xl font-[600]">Organization</h4>
-                </div>
-                <hr/>
-                <div className="p-6">
-                    <div className="flex flex-col md:flex-row gap-4">
-                       <div>
-                            <label className="block mb-3">Category</label>
-                            <select className="primary-select w-full">
-                            <option>Automobiles</option>
-                            <option>Food</option>
-                            <option>Cloths</option>
-                            </select>
-                       </div>
-                       <div>
-                            <label className="block mb-3 text-nowrap">Sub-category</label>
-                            <select className="primary-select w-full">
-                            <option>Nissan</option>
-                            <option>Snacks</option>
-                            <option>Nike</option>
-                            </select>
-                       </div>
-                    </div>
-                    <label className="block mt-4">Tags</label>
-                    <Input type="text" name="tags" variant="primary-input" placeholder="" />
-                </div>
-            </div>
+           <ProductCategory/>
         </div>
      </div>
     </div>

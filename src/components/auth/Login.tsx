@@ -15,7 +15,7 @@ import { useEffect } from "react"
 const Login = () => {
 
   const dispatch = useDispatch<AppDispatch>();
-  const { token } = useAppSelector((state) => state.user);
+  const { token } = useAppSelector((state) => state.user.user);
   const router = useRouter();
   
   const {

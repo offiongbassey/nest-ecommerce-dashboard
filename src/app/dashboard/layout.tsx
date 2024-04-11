@@ -9,7 +9,7 @@ import { useEffect } from "react";
 export default function MainLayout({ children }: Readonly<{
     children: React.ReactNode
 }>) {
-    const { token } = useAppSelector((state) => state.user); 
+    const { token } = useAppSelector((state) => state.user.user); 
     const router = useRouter();
 
     useEffect(() => {

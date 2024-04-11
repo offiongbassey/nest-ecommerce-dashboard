@@ -11,7 +11,7 @@ import Button from "../Button";
 import { useRouter } from "next/navigation";
 
 const SidebarList = () => {
-  const { token } = useAppSelector((state) => state.user);
+  const { token } = useAppSelector((state) => state.user.user);
   const dispatch = useDispatch<AppDispatch>();
   const router = useRouter();
 
