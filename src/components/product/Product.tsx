@@ -1,9 +1,24 @@
+"use client";
+
 import Link from "next/link"
 import Button from "../Button"
 import Input from "../Input"
 import ProductList from "./ProductList"
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { AppDispatch, useAppSelector } from "@/redux/store"
+import { getProducts } from "@/redux/features/product/productSlice"
 
 const Product = () => {
+    const { token } = useAppSelector((state => state.user.user));
+    const { products } = useAppSelector((state) => state.product);
+    const dispatch = useDispatch<AppDispatch>();
+
+    useEffect(() => {
+        if(typeof(window) !== undefined){
+            dispatch(getProducts(token));
+        }
+    }, [])
   return (
     <div className="padding-container pt-32 text-green-30 w-full">
      <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
@@ -36,7 +51,7 @@ const Product = () => {
             </div>
         </div>
         <hr/>
-        <ProductList />
+        <ProductList products={products} />
      </div>
     </div>
   )

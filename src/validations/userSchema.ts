@@ -10,11 +10,24 @@ export const signUpSchema = yup.object({
     password: yup.string().min(6, "Password must be atleast 6 characters").required("Password is required")
 });
 
-export type SignUpSchemaType =  yup.InferType<typeof signUpSchema>
+export type SignUpSchemaType =  yup.InferType<typeof signUpSchema>;
 
 export const loginSchema = yup.object({
     email: yup.string().email("Invalid email address").required("Email is required"),
     password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required")
 });
 
-export type LoginSchemaType = yup.InferType<typeof loginSchema>
+export type LoginSchemaType = yup.InferType<typeof loginSchema>;
+
+export const setupSchema = yup.object({
+    name: yup.string().min(4, "Business Name must be at least 4 characters").required("Business Name is required"),
+    phone: yup.string().min(10, "Phone Number must be at least 10 digits")
+    .max(15, "Phone Number must not be more than 15 digits").required("Phone Number is required"),
+    address: yup.string().required("Address is required"),
+    email: yup.string().email("Invalid email address").required("Email is required"),
+    state: yup.string().required("State is required"),
+    city: yup.string().required("City is required"),
+    desc: yup.string().required("Description is required")
+});
+
+export type SetupSchemaType = yup.InferType<typeof setupSchema>;

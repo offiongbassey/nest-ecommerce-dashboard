@@ -9,11 +9,13 @@ import { useEffect } from "react";
 export default function MainLayout({ children }: Readonly<{
     children: React.ReactNode
 }>) {
-    const { token } = useAppSelector((state) => state.user.user); 
+    const { token, is_verified } = useAppSelector((state) => state.user.user); 
     const router = useRouter();
 
     useEffect(() => {
       if(!token){
+        router.push("/login");
+      }else if(!is_verified){
         router.push("/login");
       }
       }, [token, router]); 
