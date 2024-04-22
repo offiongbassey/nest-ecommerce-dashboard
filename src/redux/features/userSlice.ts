@@ -16,7 +16,26 @@ type UserAttributes = {
     email: string;
     phone: string;
     token: string;
+    status: string;
+    is_verified: boolean;
 }
+
+
+type SetupData = {
+    data: SetupInfo;
+    token: string;
+}
+
+type SetupInfo = {
+    name: string;
+    address: string;
+    city: string;
+    desc: string;
+    alt_phone?: string;
+    phone: string;
+    state: string;
+}
+
 
 const initialState = {
     status: "",
@@ -28,11 +47,15 @@ const initialState = {
         last_name: "",
         email: "",
         phone: "",
-        token: ""
+        token: "",
+        status: "",
+        is_verified: false,
+        
     } as UserAttributes,
 } as InitialStateAttributes;
 
 const AUTH_ENDPOINT = `${process.env.NEXT_PUBLIC_API_ENDPOINT}/auth/vendor`;
+const STORE_ENDPOINT = `${process.env.NEXT_PUBLIC_API_ENDPOINT}/store/vendor`;
 
 export const registerUser = createAsyncThunk("auth/register", async(values: {}, { rejectWithValue }) => {
     try {
@@ -56,6 +79,34 @@ export const registerUser = createAsyncThunk("auth/register", async(values: {}, 
         return rejectWithValue(error_message);
     }
 });
+
+export const setupAccount = createAsyncThunk("auth/setup", async(values: SetupData, { rejectWithValue}) => {
+    try {
+        const { data, token } = values;
+        const response = await axios.post(STORE_ENDPOINT, data, {
+            headers: {
+                token
+            }
+        })
+       
+        toast.success(response.data.message);
+        return response.data;
+        
+    } catch (error: any) {
+        const error_message = error.response.data.message;
+        if(typeof(error_message) === "string"){
+            toast.error(error_message);
+        }else if(Array.isArray(error_message)){
+            error_message.forEach((err) => {
+                toast.error(err.msg);
+            });
+        }else {
+            toast.error("An unexpected error occured");
+        }
+        // console.log("error ", error_message);
+        return rejectWithValue(error_message);
+    }
+})
 
 export const loginUser = createAsyncThunk("auth/login", async(values: {}, { rejectWithValue }) => {
     try {
@@ -123,7 +174,7 @@ export const userSlice = createSlice({
             })
             .addCase(registerUser.fulfilled, (state, action) => {
                 state.status = "succeeded";
-                // state.user = action.payload.data;
+                state.user = action.payload.data;
             })
             .addCase(registerUser.rejected, (state, action) => {
                 state.status = "failed";
@@ -151,6 +202,18 @@ export const userSlice = createSlice({
             .addCase(logoutUser.rejected, (state, action) => {
                 state.status = "failed";
                 state.error = action.payload;
+                state.user = initialState.user;
+            })
+            .addCase(setupAccount.pending, (state, action) => {
+                state.status = "loading";
+            })
+            .addCase(setupAccount.fulfilled, (state, action) => {
+                state.status = "succeeded";
+                state.user.is_verified = true;
+            })
+            .addCase(setupAccount.rejected, (state, action) => {
+                state.status = "failed";
+                state.error = action.payload
             })
     }
 });

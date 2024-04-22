@@ -28,7 +28,7 @@ const SignUp = () => {
     
     const response = await dispatch(registerUser(data));
     if(response.payload.success){
-      router.push("/login");
+      router.push("/setup");
     }
   }
 
